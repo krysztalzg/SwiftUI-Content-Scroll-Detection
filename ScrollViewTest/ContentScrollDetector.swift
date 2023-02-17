@@ -10,10 +10,6 @@ private struct ContentScrollDetector: ViewModifier {
     @Binding var didScrollContent: Bool
     @State private var frame: CGRect = .zero
 
-    var offset: CGFloat {
-        didScrollContent ? (-frame.minY) : 0
-    }
-
     func body(content: Content) -> some View {
         content
             .zIndex(.infinity)
